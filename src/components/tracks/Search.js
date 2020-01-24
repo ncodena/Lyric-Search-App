@@ -16,7 +16,7 @@ class Search extends Component {
         .then(res => {
             dispatch({
                 type: 'SEARCH_TRACKS',
-                payload: res.data.message.body_track_list
+                payload: res.data.message.body.track_list
             });
             this.setState({trackTitle: ''});
         })
@@ -24,7 +24,7 @@ class Search extends Component {
 
     }
 
-    onChange= e => {
+    onChange = e => {
         this.setState({ [e.target.name]: e.target.value });
         
     };
@@ -32,7 +32,7 @@ class Search extends Component {
         return (
             <Consumer>
                 {value => {
-
+                    {/* console.log(value) */}
                     const {dispatch} = value;
                     return (
                         <div className="card card-body mb-4 p-4">
@@ -44,7 +44,7 @@ class Search extends Component {
                                 <div className="form-group">
                                     <input type="text" className="form-control form-control-lg" placeholder="Song title" name="trackTitle" value={this.state.trackTitle} onChange={this.onChange}/>
                                 </div>
-                                <button className="btn btn-primary btn-lg block mb-5" type="submit">Get Track Lyrics</button>
+                                <button className="btn btn-primary btn-lg btn-block mb-5" type="submit">Get Track Lyrics</button>
                             </form>
 
                         </div>
