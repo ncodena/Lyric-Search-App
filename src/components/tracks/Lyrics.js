@@ -9,7 +9,6 @@ class Lyrics extends Component {
         track: {},
         lyrics: {},
         album: {},
-        music: {}
     }
     
 
