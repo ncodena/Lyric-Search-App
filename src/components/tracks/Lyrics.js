@@ -1,8 +1,8 @@
+/* eslint-disable no-useless-concat */
 import React, { Component } from 'react';
 import axios from 'axios';
 import Spinner from '../layouts/Spinner';
 import {Link} from 'react-router-dom';
-import Track from './Track';
 
 class Lyrics extends Component {
     state={
